@@ -47,7 +47,7 @@ public class Main {
                 double runTimeEntered = runScanner.nextDouble();
                 runTime.add(runTimeEntered);
                 for (int a = 0; a < list.size(); a++) {
-                //for (int b = a+1; b < list.size(); b++) {
+                //for (int b = a+1; b < list.size(); b++) {  (edited from http://stackoverflow.com/questions/4994021/compare-every-item-to-every-other-item-in-arraylist)
                 if (runTime(a) < lowestRun) {
                     lowestRun = runTime(a)
                 }
