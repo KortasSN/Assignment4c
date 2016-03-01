@@ -31,8 +31,9 @@ public class Main {
         HashMap<String, LinkedList> lakeInfo = new HashMap();    //create HashMap to store lake name and run time
         double lowestRun = 8675309;
         for (int x = 0; x< counter; x++) {
-
+       
             Scanner lakeScanner = new Scanner(System.in);
+            
             System.out.println("Enter the lake name:");
             String lakeName = lakeScanner.nextLine();
             System.out.println("How many runs for this lake?");
@@ -45,9 +46,14 @@ public class Main {
                 System.out.println("Please enter time:");
                 double runTimeEntered = runScanner.nextDouble();
                 runTime.add(runTimeEntered);
-                if (runTimeEntered < lowestRun) {
-                    lowestRun = runTimeEntered;
+                for (int a = 0; a < list.size(); a++) {
+                //for (int b = a+1; b < list.size(); b++) {
+                if (runTime(a) < lowestRun) {
+                    lowestRun = runTime(a)
                 }
+                //if (runTimeEntered < lowestRun) {
+                    lowestRun = runTimeEntered;
+                //}
             }
             lakeInfo.put(lakeName, runTime);
             //double lowestRun = 8675309;
